@@ -19,7 +19,6 @@ if __name__ == '__main__':
 	# Transform
 	df = transform_data_top_movies(df, data)
 	# print(df)
-
 	# Load
 	load_to_file_csv(df, csv_path)
 	load_to_db_sqlite(df, db_name, table_name)

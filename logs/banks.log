@@ -1,0 +1,8 @@
+2024-08-13 20:12:09,602 - banks - INFO - ----------------- Start ---------------
+2024-08-13 20:12:09,602 - banks - INFO - Start Extract
+2024-08-13 20:12:11,610 - banks - INFO - Ended Extract
+2024-08-13 20:12:11,610 - banks - INFO - Start Transform
+2024-08-13 20:12:11,615 - banks - INFO - Ended Transform
+2024-08-13 20:12:11,615 - banks - INFO - Start Loading
+2024-08-13 20:12:12,130 - banks - INFO - Ended Loading
+2024-08-13 20:12:12,136 - banks - INFO - ----------------- End ---------------
