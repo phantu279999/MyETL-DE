@@ -8,6 +8,9 @@ file: main_movies.py
 
 Simple ETL extract data top 50 Most Highly Ranked Movies
 
+<img src="https://raw.githubusercontent.com/phantu279999/MyETL-DE/master/media/table_movies.png" atl="Image Table Movies">
+
+
 ### Main Top Banks
 
 #### Table Database
