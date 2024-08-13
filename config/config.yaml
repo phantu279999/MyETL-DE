@@ -1,0 +1,10 @@
+database:
+  host: "localhost"
+  user: "user"
+  password: "password"
+  dbname: "etl_db"
+api:
+  base_url: "https://api.example.com/data"
+  api_key: "your_api_key"
+files:
+  csv_path: "data/raw_data/sales_data.csv"
