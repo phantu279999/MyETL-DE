@@ -11,4 +11,4 @@ Simple ETL extract data top 50 Most Highly Ranked Movies
 
 #### Table Database
 This project extract data top banks in the word and loading to file CSV, and SQLite
-<img src="" atl="Image Table Banks">
+<img src="https://raw.githubusercontent.com/phantu279999/MyETL-DE/master/media/table_banks.png" atl="Image Table Banks">
