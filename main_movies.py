@@ -12,10 +12,15 @@ csv_path = 'top_50_films.csv'
 df = pd.DataFrame(columns=["Average Rank", "Film", "Year"])
 
 if __name__ == '__main__':
+	# Extract
 	html_page = extract_html_from_api(url, {})
 	data = BeautifulSoup(html_page, 'html.parser')
+
+	# Transform
 	df = transform_data_top_movies(df, data)
 	# print(df)
+
+	# Load
 	load_to_file_csv(df, csv_path)
 	load_to_db_sqlite(df, db_name, table_name)
 

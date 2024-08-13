@@ -1,22 +1,18 @@
-import yaml
 import logging
 from etl.extract import extract_from_csv, extract_from_api, extract_from_db
 from etl.transform import clean_data, merge_data, aggregate_data
 from etl.load import load_to_db
+from config import config
 
 logging.basicConfig(filename='logs/etl.log', level=logging.INFO)
 
 
 def run_etl():
-	# Load configuration
-	with open("config/config.yaml", 'r') as stream:
-		config = yaml.safe_load(stream)
-
 	try:
 		# Extract
-		csv_data = extract_from_csv(config['files']['csv_path'])
-		api_data = extract_from_api(config['api']['base_url'], {"Authorization": f"Bearer {config['api']['api_key']}"})
-		db_data = extract_from_db("SELECT * FROM sales", config['database'])
+		csv_data = extract_from_csv(config.csv_path)
+		api_data = extract_from_api(config.base_url, {"Authorization": f"Bearer {config.api_key}"})
+		db_data = extract_from_db("SELECT * FROM sales", config.data_base)
 
 		# Transform
 		cleaned_csv = clean_data(csv_data)
@@ -24,7 +20,7 @@ def run_etl():
 		final_data = aggregate_data(merged_data, "date", "sales_amount")
 
 		# Load
-		load_to_db(final_data, "sales_summary", config['database'])
+		load_to_db(final_data, "sales_summary", config.data_base)
 
 		logging.info("ETL process completed successfully.")
 
